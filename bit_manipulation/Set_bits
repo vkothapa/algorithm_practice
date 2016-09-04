@@ -7,3 +7,7 @@ class Solution:
       count=count+1
       n=n&(n-1)
     return count
+
+# Above is a logn implementation
+
+# Is there any O(1) implementation - like lookup
