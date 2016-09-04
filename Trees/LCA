@@ -1,0 +1,18 @@
+class Solution:
+    # @param {TreeNode} root
+    # @param {TreeNode} p
+    # @param {TreeNode} q
+    # @return {TreeNode}
+    def lowestCommonAncestor(self, root, p, q):
+        if (root is None or p is None or q is None):
+            return None
+            
+        ancestor = root
+        
+        while True :
+            if (p.val < ancestor.val and q.val < ancestor.val): 
+                ancestor = ancestor.left 
+            elif (p.val > ancestor.val and q.val > ancestor.val):
+                ancestor = ancestor.right
+            else:
+                return ancestor
