@@ -1,0 +1,15 @@
+int main(){
+    string S;
+    cin >> S;
+    
+    int len=S.length();
+    int i,count=0;
+    for(i=0;i<len;i+=3){
+        if(S[i]!='S') count++;
+        if(S[i+1]!='O') count++;
+        if(S[i+2]!='S') count++;
+            
+    }
+    cout<<count;
+    return 0;
+}
